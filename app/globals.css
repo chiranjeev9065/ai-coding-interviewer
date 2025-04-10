@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 250 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 250 50% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 25%;
+    --input: 240 5% 25%;
+    --ring: 250 95% 60%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.prose code {
+  @apply text-primary-foreground bg-primary/20 px-1 py-0.5 rounded;
+}
+
+.prose pre {
+  @apply bg-muted p-4 rounded-md overflow-x-auto;
+}
+
+.prose pre code {
+  @apply bg-transparent text-foreground p-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary pl-4 italic;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-foreground font-bold;
+}
+
+.prose h1 {
+  @apply text-2xl mt-6 mb-4;
+}
+
+.prose h2 {
+  @apply text-xl mt-5 mb-3;
+}
+
+.prose h3 {
+  @apply text-lg mt-4 mb-2;
+}
+
+.prose p {
+  @apply my-3;
+}
+
+.prose ul {
+  @apply list-disc pl-6 my-3;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 my-3;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+.prose table {
+  @apply min-w-full divide-y divide-gray-700 my-4;
+}
+
+.prose thead {
+  @apply bg-muted;
+}
+
+.prose th {
+  @apply px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider;
+}
+
+.prose td {
+  @apply px-4 py-3 text-sm;
+}
+
